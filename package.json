@@ -1,0 +1,35 @@
+{
+  "name": "locate-game-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-favicon": "^2.0.1",
+    "favicons-webpack-plugin": "0.0.9",
+    "html-webpack-plugin": "^3.2.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthew-collins1991/locate-game-frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matthew-collins1991/locate-game-frontend/issues"
+  },
+  "homepage": "https://github.com/matthew-collins1991/locate-game-frontend#readme"
+}
