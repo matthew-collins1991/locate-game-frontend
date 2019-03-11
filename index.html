@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Degrees &#176 of Seperation</title>
+
+    <script defer src="./src/api.js">  </script>
+    <script defer src="./src/location.js">  </script>
+    <script defer src="./src/index.js">  </script>
+
+
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Exo+2:300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+  <div class="full-page-container">
+
+<!-- ==================================== Sign in ================================= -->
+<!-- LOGO -->
+<div class='signin-wrapper' id="is_visible">
+        <div class='logo-cont' id='is_visible'>
+            <img src="image/logo.svg" alt="compass logo" class='logo'>
+        </div>
+
+        <div class="header-bar" id="is_visible">
+          <h1>Degrees&deg of Separation</h1>
+        </div>
+
+    <!-- Div to show when user is filling out sign-in form -->
+        <div class="sign-up" id='is_visible'>
+            <script type="text/javascript">	//auto expand textarea
+    function adjust_textarea(h) {
+    h.style.height = "20px";
+    h.style.height = (h.scrollHeight)+"px";
+    }
+    </script>
+    <form id="signup_form" class = "signup_form">
+            <form id="signup_form" class="signup_form">
+                <!-- <input id="signup_name" type="text" name="name" placeholder="Name" /> -->
+                <input id="signup_username" type="text" name="username" placeholder="Username" />
+                <br>
+                <br>
+                <a id="sign-up-link" class="button" type="submit" value="Sign Up!">Get Started</a>
+                <input id="sign-up-submit" type="submit" value="yo!" style="display: none;"/>
+
+            </form>
+    <br>
+        </div>
+</div>
+
+<!-- =================================Loading Div=============================================== -->
+
+<div class="loading" id = "is_hidden">
+
+</div>
+
+
+<!-- =================================Orientation Div=============================================== -->
+
+<!-- Div to show when user is orientating -->
+    <div class="orientate" id='is_hidden'>
+
+      <div class='inner_orientation'>
+            <!-- <h2 id= "welcome"></h2> -->
+            <br>
+            <h2>Orientate Yourself!</h2>
+
+            <!-- <div class="pointer-section"> -->
+            <div class="heading-wrapper">
+            <h3 id = "orient-heading"></h3>
+          </div>
+            <!-- <div class="pointer-section">
+
+
+            </div> -->
+            <br>
+                <span><p id="current-location"></p></span>
+      <!-- </div> -->
+
+        <br>
+        <a onclick="visibilityFunction()" id = "ready-btn" class="button" type="button" name="orientation">Ready</a>
+
+
+     </div>
+   </div>
+
+
+
+
+
+<!-- ===================================GAMEPLAY DIVS ========================================= -->
+
+<!-- Div to show count in timer -->
+<div class='counter-container' id="is_hidden">
+
+  <div class="count-in-timer">
+
+  </div>
+</div>
+
+
+
+
+
+<!-- Div to show gameplay -->
+    <div class="gameplay" id='is_hidden'>
+
+      <p id="round"> Round: 1</p>
+      <p id="score"> Score: 0</p>
+      
+      <h2 class='display_time_left' id="is_visible"></h2>
+
+
+
+      <br>
+
+        <div  id="locked-target-bearing" ><h3></h3></div>
+
+      <div class="pointer-section">
+          <!-- SVG  -->
+
+          <svg class='compass' width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+           <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+           <g>
+           <g id="svg_1">
+            <title>Layer 1</title>
+            <ellipse opacity="0.97" stroke-dasharray="5,5" ry="100" rx="100" cy="50%" cx="50%" stroke-width="14.5" stroke="#ffffff" fill="#000000" opacity="0"/>
+            <ellipse id="svg_4" cy="50%" cx="50%" fill-opacity="0" stroke-opacity="null" stroke-width="9.5" stroke="#000" fill="#fff"/>
+
+
+           </g>
+           <!--arrow and degree  -->
+           <g>
+
+              <ellipse ry="8.5" rx="8.5" id="svg_5" cy="40%" cx="65%" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#000" fill="#fff"/>
+               <path stroke="#000000" style="transform: translate(-31%,64%) rotate(-90deg); transform-origin: center;" id="svg_7" d="m292.859883,201.650328l-72.243433,-57.492779l129.896014,57.492779l-129.896014,57.492748l72.243433,-57.492748z" fill-opacity="null" stroke-width="6.5" fill="#fff"/>
+                <!-- style="transform: translate(20%, 30%) rotate(-90deg); transform-origin: center;" -->
+           </g>
+         </g>
+          </svg>
+
+
+          <!-- SVG -->
+      </div>
+          <h2 class='game_start_countdown' id='is_visible'></h2>
+      <br>
+      <h1 id="target-name"></h1>
+      <!-- <button id="gameplay-btn" type="button" name="select-location">CONFIRM</button> -->
+      <a id="gameplay-btn" class="button" type="button" name="select-location">LOCK HEADING</a>
+      <br>
+    </div>
+
+
+    <!-- ============================SHOW ROUND SCORE DIV========================================= -->
+
+
+    <div class="modal" id='is_hidden'>
+      <table>
+        <tbody id = "modal-body">
+          <tr>
+            <td id= "bearingTd"></td>
+          </tr>
+          <tr>
+            <td id= "targetTd"></td>
+          </tr>
+          <tr>
+            <td id= "scoreTd"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+    <!-- ======================SCOREBOARD DIV===================================================== -->
+
+
+<!-- Div to show scoreboard -->
+    <div class="scoreboard" id='is_hidden'>
+
+      <h4 id = "final-score">Your Score: </h4>
+      <table>
+    <thead>
+        <tr>
+            <h2><th text-align="center" colspan="2">Scoreboard</th></h2>
+        </tr>
+    </thead>
+    <tbody class = "scoreboard-body">
+
+    </tbody>
+</table>
+<br>
+
+<a id="restart-btn" class="button" type="button" name="restart">New Game</a>
+
+    </div>
+
+
+    <!-- Div to hide/show dropdown menu -->
+    <div class="dropdown-menu" id='is_visible'>
+
+    </div>
+
+
+<!-- end of full page div -->
+  </div>
+
+
+
+</body>
+</html>

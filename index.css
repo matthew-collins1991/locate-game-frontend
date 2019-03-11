@@ -1,0 +1,519 @@
+
+
+
+*{
+  /* font-family: 'Major Mono Display', monospace; */
+
+    font-family: 'Cutive Mono', monospace;
+    box-sizing: border-box;
+}
+
+#is_visible{
+  display: block;
+}
+
+#is_hidden{
+  display: none;
+}
+
+html, body {
+            height: 100%;
+            margin: 0;
+            background-color: black;
+            /* background-color: #012839; */
+            align-items: center;
+            text-align: center;
+            padding: 0px;
+            color: white;
+        }
+
+
+
+        /* =========================== BUTTONS ==================================== */
+
+
+
+
+.button {
+  text-decoration: none;
+  text-transform: uppercase;
+  /* font-family: 'Exo 2', sans-serif; */
+  font-family: 'Cutive Mono', monospace;
+  /* font-family: 'Oswald', sans-serif; */
+  font-weight: 300;
+  font-size: 20px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+   color: #708090;
+   border: 1px solid #708090;
+  /* color: #00c7ec; */
+  /* border: 1px solid #00c7ec; */
+  border-radius: 5px;
+  line-height: 3em;
+  width: 50%;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.button:hover {
+  color: white;
+  box-shadow: 0 0 30px 0 rgba(0, 199, 236, 0.5);
+  background-color: #708090;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.button:hover:before {
+  -webkit-animation: shine 0.5s 0s linear;
+  -moz-animation: shine 0.5s 0s linear;
+  animation: shine 0.5s 0s linear;
+}
+.button:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+.button:before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: white;
+  box-shadow: 0 0 15px 3px white;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@-webkit-keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+@-moz-keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+
+/* #gameplay-btn{
+
+  position:relative;
+  margin-top:95%;
+} */
+
+
+
+
+
+        /* ===================================================== */
+
+.full-page-container{
+    min-height: 100%;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+    /* position: relative; */
+    /* display: flex; */
+}
+
+.signin-wrapper{
+  margin:auto;
+  padding-top: 10%
+
+
+}
+
+.header-bar h1{
+padding-top: 25px;
+/* font-weight: 100; */
+font-family: 'Major Mono Display', monospace;
+font-size: 25px;
+background-color: black;
+/* background-color: #084864; */
+color: 	white;
+}
+
+.login-page{
+padding: 25px;
+}
+
+.sign-up{
+padding: 10px;
+
+}
+
+input{
+  display: block;
+  padding: 10px;
+
+  margin: auto;
+  margin-top: 20px;
+
+}
+
+.loading{
+
+
+
+    /* width: 300px;
+    height: 300px; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+.orientate{
+padding: 25px;
+width: 100vw;
+ height: 100vh;
+ display: flex;
+}
+
+
+.inner_orientation{
+
+margin: auto;
+
+}
+
+.gameplay{
+padding: 25px;
+display: flex;
+width: 100vw;
+height: 100vh;
+}
+
+table {
+    border-spacing: 0;
+    width: 75%;
+    max-width: 400px;
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+    margin: auto;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+    text-align: center;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+
+}
+
+
+td:first-child, th:first-child {
+    padding-left: 0;
+}
+
+th{
+  text-align: center;
+  font-size: xx-large;
+}
+
+td{
+  text-align: left;
+}
+
+td, th {
+    border-bottom: 0.1rem solid #e1e1e1;
+    padding: 1.2rem 1.5rem;
+    display: table-cell;
+    vertical-align: inherit;
+    border-spacing: 0;
+}
+
+
+.scoreboard{
+  display: block;
+  padding: 25px;
+  align-items: center;
+}
+
+.dropdown-menu{
+padding: 25px;
+}
+
+.compass-point {
+
+margin: auto;
+ /* vertical-align: middle; */
+
+}
+
+
+
+
+div#is_visible.counter-container{
+  width: 100vw;
+   height: 100vh;
+   display: flex;
+
+}
+
+/* .counter-container{
+
+
+} */
+
+.count-in-timer{
+
+margin: auto;
+/* font-family: 'Major Mono Display', monospace; */
+animation: pulse 4s ease-out infinite;
+}
+
+.count-in-timer h1{
+
+font-family: 'Major Mono Display', monospace;
+
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  48%,
+  52% {
+    transform: scale(2);
+    opacity: 2;
+  }
+}
+
+
+#svg_1 {
+
+   transform-origin: 50% 50%;
+}
+
+.compass{
+
+margin: auto;
+
+
+}
+
+.heading-wrapper{
+
+  height: 30vh;
+  display: flex;
+
+}
+
+#orient-heading{
+
+  margin: auto;
+ font-weight: 300;
+  font-size: 75px;
+}
+
+.pointer-section{
+
+  display: flex;
+  margin: auto;
+  width: 75vw;
+  height: 40vh;
+}
+
+#round{
+    margin-top:5%;
+    float: left;
+
+}
+
+#score{
+
+  float: right;
+
+}
+
+.display_time_left{
+
+    margin-top:15%;
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+
+}
+
+
+.logo-cont {
+
+display: flex;
+
+}
+
+.logo{
+padding-top: 30px;
+margin:auto;
+width: 10em;
+}
+
+/* ==========================FORM INPUTS=================================== */
+
+ .signup_form{
+	font-family: 'Open Sans Condensed', arial, sans;
+	width: 80%;
+	/* padding: 30px; */
+	background: transparent;
+	margin:auto;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+  color: white;
+
+ }
+.signup_form h2{
+	background: white;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	color: white;
+	font-size: 18px;
+	font-weight: 100;
+	padding: 20px;
+	margin: -30px -30px 30px -30px;
+}
+.signup_form input[type="text"],
+.signup_form input[type="date"],
+.signup_form input[type="datetime"],
+.signup_form input[type="email"],
+.signup_form input[type="number"],
+.signup_form input[type="search"],
+.signup_form input[type="time"],
+.signup_form input[type="url"],
+.signup_form input[type="password"],
+.signup_form textarea,
+.signup_form select
+{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 100%;
+	padding: 7px;
+	border: none;
+	border-bottom: 1px solid #ddd;
+	background: transparent;
+	margin-bottom: 10px;
+	font: 16px Arial, Helvetica, sans-serif;
+	height: 45px;
+  color: white;
+}
+.signup_form textarea{
+	resize:none;
+	overflow: hidden;
+  color: white;
+}
+.signup_form input[type="button"],
+.signup_form input[type="submit"]{
+	-moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	background-color: #2CBBBB;
+	border: 1px solid #27A0A0;
+	display: inline-block;
+	cursor: pointer;
+	color: #FFFFFF;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 14px;
+	padding: 8px 18px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.signup_form input[type="button"]:hover,
+.signup_form input[type="submit"]:hover {
+	background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
+	background-color:#34CACA;
+}
+
+
+
+
+/* =========================== MODAL BOX==================================== */
+
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 40%;
+    background-color: black;
+    opacity: 0.85;
+    visibility: visible;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    text-align: center;
+}
+#modal-body td{
+    text-align: center;
+}
+
+#modal-body tr{
+    height: 70px;
+}
+
+
+
+/*  */
+=======
+#locked-target-bearing {
+  height: 20px;
+  max-height: 20px;
+}
