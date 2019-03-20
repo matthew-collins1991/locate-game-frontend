@@ -10,7 +10,7 @@ if (window.location.href.includes('ngrok'))
   BASEURL = 'https://f14fcfb1.ngrok.io/api/v1'
 
 } else {
-  BASEURL = 'http://localhost:3000/api/v1'
+  BASEURL = 'https://locate-backend.herokuapp.com/api/v1'
 }
 
 const USERSURL =  BASEURL + '/users'
